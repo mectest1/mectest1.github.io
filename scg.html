@@ -13,7 +13,7 @@
 <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.10.5/jquery.dataTables.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function() {
-	
+	init();
 });
 function init() {
 	$('#scTbl').DataTable({
@@ -27,12 +27,13 @@ function init() {
 			}
 		]
 	});
+	
 }
 </script>
 </head>
 <body>
 <h1>Sh1t Code Gallery</h1>
-<div id='tblDiv' style="display: none;">
+<div id='tblDiv'>
 	<table class='display' id='scTbl'>
 		<thead>
 			<tr>
