@@ -8,13 +8,39 @@
 <title>Sh1t Code Gallery</title>
 <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.10.5/css/jquery.dataTables.min.css">
 <link rel="stylesheet" type="text/css" href="http://ajax.aspnetcdn.com/ajax/jquery.ui/1.11.4/jquery-ui.min.js">
-<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.11.1.min.js"></script>
 <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.migrate/jquery-migrate-1.1.1.min.js"></script>
 <script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jquery.dataTables/1.10.5/jquery.dataTables.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+	$('#scTbl').DataTable();
+});
+</script>
 </head>
 <body>
-<div>
-	
+<h1>Sh1t Code Gallery</h1>
+<div id='tblDiv'>
+	<table class='display' id='scTbl'>
+		<thead>
+			<tr>
+				<th style='width: 80px;'>Date</th>
+				<th style='width: 100px;'>Author</th>
+				<th>Category</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>2015-06-16</td>
+				<td>Inman</td>
+				<td>呵呵</td>
+			</tr>
+			<tr>
+				<td>2015-06-16</td>
+				<td>Inman</td>
+				<td>蛤蛤</td>
+			</tr>
+		</tbody>
+	</table>
 </div>
 </body>
 </html>
