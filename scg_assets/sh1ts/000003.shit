@@ -1,0 +1,10 @@
+use 5.012;
+use utf8;
+binmode STDIN, ':encoding(GBK)';
+while (<STDIN>) {
+	chomp;
+	for (split //) {
+		printf("&#x%04x;", ord);
+	}
+	print "\n";
+}
