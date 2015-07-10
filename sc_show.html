@@ -11,6 +11,7 @@
 <script src="http://cdn.bootcss.com/codemirror/5.4.0/codemirror.min.js"></script>
 <script src="http://cdn.bootcss.com/codemirror/5.4.0/addon/hint/show-hint.min.js"></script>
 <script src="http://cdn.bootcss.com/codemirror/5.4.0/mode/clike/clike.min.js"></script>
+<script src="http://cdn.bootcss.com/codemirror/5.4.0/mode/javascript/javascript.min.js"></script>
 <script type="text/javascript">
 var params = window.location.search.substring(1);
 function getQueryValue(key) {
@@ -49,7 +50,7 @@ function init() {
 	$('#sctxt').text(shitContent).show();
 	CodeMirror.fromTextArea($('#sctxt')[0], {
 		lineNumbers: true,
-		mode: lang,
+		mode: "text/x-" + lang,
 		readOnly: 'nocursor'
 	});
 }
