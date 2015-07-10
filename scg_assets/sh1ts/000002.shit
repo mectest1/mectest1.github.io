@@ -1,0 +1,50 @@
+tabPane.addChangeListener(new ChangeListener() {
+	public void stateChanged(ChangeEvent aEn) {
+		// XX-XXXX_1 _S
+		/*
+		if (tabPane.getSelectedIndex() == 0) {
+			commonPane = calculationModulePanel;
+		}
+		if (tabPane.getSelectedIndex() == 1) {
+			commonPane = calculationFuncPanel;
+		}
+		// #5856_S
+		if (tabPane.getSelectedIndex() == 2) {
+			commonPane = childPage;
+		}
+		// #5856_E
+		// #8098 _S
+		if (tabPane.getSelectedIndex() == 3) {
+			commonPane = calculationDOPanel;
+		}
+		// #8098 _E
+		*/
+		commonPane = (IGetParaXMLPane) tabPane.getSelectedComponent();
+		// XX-XXXX_1 _E
+	}
+});
+
+//...
+
+	public void clear() {
+		//XX-XXXX_1 _S
+		/* sh1t code maker.
+		// xx-4xxx _S by Andy
+		if (commonPane instanceof CalculationFuncPanel) {
+			calculationFuncPanel.clear();
+			// xx-4xxx _S
+			// } else {
+			// commonPane.clear();
+		} else if (commonPane instanceof CommonSplitPanel) {
+			((CommonSplitPanel) commonPane).clear();
+		} else if (commonPane instanceof AbstractCalculationPanel) {
+			((AbstractCalculationPanel) commonPane).clear();
+			// xx-4xxx _E
+		}
+		// xx-4xxx _E by Andy
+		*/
+		commonPane.clear();
+		//XX-XXXX_1 _E
+	}
+
+//...
