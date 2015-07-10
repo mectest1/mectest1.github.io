@@ -50,7 +50,7 @@ function init() {
 	$('#sctxt').text(shitContent).show();
 	CodeMirror.fromTextArea($('#sctxt')[0], {
 		lineNumbers: true,
-		mode: "text/x-" + lang,
+		mode: lang,
 		readOnly: 'nocursor'
 	});
 }

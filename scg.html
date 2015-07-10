@@ -16,7 +16,7 @@ $(document).ready(function() {
 	init();
 });
 function init() {
-	$('#scTbl').DataTable({
+	var tbl = $('#scTbl').DataTable({
 		"ajax": "./scg_assets/sh1t.json",
 		"iDisplayLength": 10,
 		"bAutoWidth": false,
@@ -28,7 +28,15 @@ function init() {
 			}
 		]
 	});
-	
+	$('#scTbl').on('click', '.btn-open', function(event) {
+		var jqEvent = $.event.fix(event);
+		var trEle = $(jqEvent.target).closest('tr');
+		var data = tbl.row(trEle).data();
+		var file = data[3];
+		var lang = data[4];
+		var url = ['./sc_show.html?file=', file, "&lang=", lang].join('');
+		window.open(url);
+	})
 }
 </script>
 </head>
@@ -43,6 +51,7 @@ function init() {
 				<th>Category</th>
 				<th>File</th>
 				<th>Lang</th>
+				<th>Operation</th>
 			</tr>
 		</thead>
 	</table>
