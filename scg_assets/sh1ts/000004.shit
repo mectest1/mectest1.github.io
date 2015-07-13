@@ -6,8 +6,7 @@ open my $fh, '<:encoding(UTF-8)', 'shit.txt'
 
 while (<$fh>) {
 	chomp;
-	my $replaced = s/\bshit\b/cake/gi;
-	say if $replaced;
+	say if s/\bshit\b/cake/gi;
 }
 
 close $fh;
