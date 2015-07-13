@@ -1,0 +1,13 @@
+use 5.016;
+use utf8;
+use strict;
+open my $fh, '<:encoding(UTF-8)', 'shit.txt'
+	or die "Can't open shit.txt: $!";
+
+while (<$fh>) {
+	chomp;
+	my $replaced = s/\bshit\b/cake/gi;
+	say if $replaced;
+}
+
+close $fh;
