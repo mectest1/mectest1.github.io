@@ -4,7 +4,7 @@
 Planned next:
 1, A Tetris game (Optional);
 2, A reference manual for JVM OpCode & instructions;
-3, A calculator that implemented in two ways: by using stack machine, or a lexical parser & analyzer & interpret;
+3, A calculator that implemented in two ways: by using stack machine, or a lexical parser & analyzer & interpreter;
 4, A visualizer for the JVM execution stack;
 
 # mectest1.github.io
