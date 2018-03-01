@@ -1,4 +1,6 @@
 
+#2018-03-01
+Overhaul of the index.html page to make it, well, viewable.
 
 #2015-10-29
 Planned next:
